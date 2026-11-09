@@ -121,7 +121,7 @@ export default function WeddingJourney() {
             className="royal-button"
             onClick={() => goTo("celebrations")}
           >
-            Explore the Wedding Events →
+            Click for invite →
           </button>
 
           <button
@@ -165,13 +165,10 @@ export default function WeddingJourney() {
             </h2>
 
             <div className="royal-detail-divider">
-              ✦ ❀ ✦
+              ✦ ထ ✦
             </div>
 
-            <p className="royal-event-tagline">
-              An evening of elegance and celebration.
-            </p>
-
+           
             <p className="royal-event-message">
               Celebrate the newlyweds with an evening of joy,
               togetherness and unforgettable memories.
@@ -184,11 +181,12 @@ export default function WeddingJourney() {
             <div className="royal-event-information reception-information">
               <p><strong>🌸 30 November 2026</strong></p>
               <p><strong>🕰️ 8:00 PM onwards</strong></p>
-              <p>
-                <strong>
-                  📍 Virasat The Hotel by Triveni Grand
-                </strong>
-              </p>
+              <p className="reception-venue">
+  <span className="venue-name">📍 Virasat</span>
+  <span className="venue-subtitle">
+    The Hotel by Triveni Grand
+  </span>
+</p>
             </div>
 
             <a
@@ -236,7 +234,7 @@ export default function WeddingJourney() {
             </h1>
 
             <div className="final-gold-divider">
-              ✦ ❀ ✦
+              ✦ ထ ✦
             </div>
 
             <h2 className="final-save-title">
@@ -254,7 +252,7 @@ export default function WeddingJourney() {
             <WeddingCountdown />
 
             <div className="final-gold-divider">
-              ✦ ❀ ✦
+              ✦ ထ ✦
             </div>
 
             <div className="final-rsvp">
@@ -272,7 +270,7 @@ export default function WeddingJourney() {
             </div>
 
             <p className="final-ending-symbol">
-              ❀
+              ထ
             </p>
           </div>
 

@@ -282,9 +282,10 @@ const toggleMusic = () => {
   <p className="event-name">Wedding</p>
   <p className="event-date">30 NOVEMBER 2026</p>
   <p className="event-time">1:00 PM ONWARDS</p>
-  <p className="event-venue">
-    Virasat The Hotel by Triveni Grand
-  </p>
+  <p className="reception-venue">
+  <span className="venue-name">📍 Virasat</span>
+  <span className="venue-subtitle">The Hotel by Triveni Grand</span>
+</p>
   <a
   className="location-button"
   href="https://maps.app.goo.gl/1GBvyL4mpqSXFykc6"

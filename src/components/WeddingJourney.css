@@ -6053,3 +6053,134 @@
 .reception-couple-names {
   /* No size change */
 }
+
+.reception-invite-text {
+  color: #3b160f !important;
+  font-weight: 1200 !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.30) !important;
+}
+
+/* Remove decorative lines above and below reception details */
+.reception-information {
+  border-top: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+  background-image: none !important;
+}
+
+.reception-information::before,
+.reception-information::after,
+.reception-information p::before,
+.reception-information p::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+}
+
+/* Enlarge reception date, time and location */
+.reception-information p {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  line-height: 1.6 !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .reception-information p {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* Reception venue styling */
+.reception-venue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.reception-venue strong {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+}
+
+.reception-venue span {
+  font-size: 17px !important;
+  font-weight: 500 !important;
+}
+
+@media (max-width: 600px) {
+  .reception-venue strong {
+    font-size: 25px !important;
+  }
+
+  .reception-venue span {
+    font-size: 15px !important;
+  }
+}
+
+.reception-information .reception-venue {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  font-size: inherit !important;
+}
+
+.reception-information .reception-venue strong {
+  display: block !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
+}
+
+.reception-information .reception-venue span {
+  display: block !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  margin-top: 4px !important;
+}
+
+@media (max-width: 600px) {
+  .reception-information .reception-venue strong {
+    font-size: 27px !important;
+  }
+
+  .reception-information .reception-venue span {
+    font-size: 15px !important;
+  }
+}
+
+/* Reception venue – two-line elegant layout */
+.royal-event-information .reception-venue {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  text-align: center !important;
+}
+
+.royal-event-information .reception-venue .venue-name {
+  display: block !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+
+.royal-event-information .reception-venue .venue-subtitle {
+  display: block !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+}
+
+@media (max-width: 600px) {
+  .royal-event-information .reception-venue .venue-name {
+    font-size: 28px !important;
+  }
+
+  .royal-event-information .reception-venue .venue-subtitle {
+    font-size: 16px !important;
+  }
+}
