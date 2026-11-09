@@ -16,64 +16,11 @@ function BappaBlessing({ image = "/bappa.png" }) {
   );
 }
 
-const events = [
-  {
-    id: "haldi",
-    title: "Haldi Night",
-    date: "28 November 2026",
-    time: "6:00 PM onwards",
-    venue: "Yadav Mansion",
-    map: "https://maps.app.goo.gl/sGizhnmYBobHotPp7",
-    icon: "🌼",
-    tagline: "A little sunshine, haldi and lots of love!",
-    invitation:
-      "Join us for an evening of golden hues, laughter, love and beautiful beginnings.",
-  },
-  {
-    id: "mehendi",
-    title: "Mehendi & Sangeet",
-    date: "29 November 2026",
-    time: "3:00 PM onwards",
-    venue: "Yadav Mansion",
-    map: "https://maps.app.goo.gl/sGizhnmYBobHotPp7",
-    icon: "🌿",
-    tagline: "A celebration of colours, music and memories!",
-    invitation:
-      "Let the mehendi bloom and the music play as we dance our hearts away.",
-  },
-  {
-    id: "wedding",
-    title: "The Wedding",
-    date: "30 November 2026",
-    time: "1:00 PM onwards",
-    venue: "Virasat The Hotel by Triveni Grand",
-    map: "https://maps.app.goo.gl/1GBvyL4mpqSXFykc6",
-    icon: "💍",
-    tagline: "Two hearts. One promise. A lifetime together.",
-    invitation:
-      "With the blessings of our families, join us as Riya and Hardik begin their forever.",
-  },
-  {
-    id: "reception",
-    title: "Wedding Reception",
-    date: "30 November 2026",
-    time: "8:00 PM onwards",
-    venue: "Virasat The Hotel by Triveni Grand",
-    map: "https://maps.app.goo.gl/1GBvyL4mpqSXFykc6",
-    icon: "✨",
-    tagline: "An evening of elegance and celebration.",
-    invitation:
-      "Celebrate the newlyweds with an evening of joy, togetherness and unforgettable memories.",
-  },
-];
-
 export default function WeddingJourney() {
   const [screen, setScreen] = useState("welcome");
-  const [selectedEvent, setSelectedEvent] = useState(null);
   const journeyRef = useRef(null);
 
   const goTo = (nextScreen) => {
-    setSelectedEvent(null);
     setScreen(nextScreen);
 
     if (journeyRef.current) {
@@ -81,20 +28,11 @@ export default function WeddingJourney() {
     }
   };
 
-  const openEvent = (event) => {
-    setSelectedEvent(event);
-  };
-
-  const closeEvent = () => {
-    setSelectedEvent(null);
-  };
-
   return (
     <main
       ref={journeyRef}
       className={`royal-journey royal-${screen}`}
     >
-      {/* Decorative border */}
       <div className="royal-border" aria-hidden="true" />
 
       {/* WELCOME SCREEN */}
@@ -140,7 +78,7 @@ export default function WeddingJourney() {
             </p>
 
             <p className="royal-family-name">
-              Mrs. Meena Yadav & Mr. Sanjay Yadav
+              Mrs. Meena Yadav &amp; Mr. Sanjay Yadav
             </p>
 
             <div className="royal-family-divider">
@@ -160,7 +98,7 @@ export default function WeddingJourney() {
             </p>
 
             <p className="royal-family-name">
-             Late Smt. Sushila Shah & Late Shri Laxmichand Khimji Shah
+              Late Smt. Sushila Shah &amp; Late Shri Laxmichand Khimji Shah
             </p>
 
             <p className="royal-relation">
@@ -168,8 +106,7 @@ export default function WeddingJourney() {
             </p>
 
             <p className="royal-family-name">
-              Mrs. Sandhya Shah & Mr. Dilip Shah 
-
+              Mrs. Sandhya Shah &amp; Mr. Dilip Shah
             </p>
           </div>
 
@@ -194,45 +131,64 @@ export default function WeddingJourney() {
         </section>
       )}
 
-      {/* ALL FOUR CELEBRATIONS */}
+      {/* WEDDING RECEPTION INVITATION */}
       {screen === "celebrations" && (
         <section className="royal-screen royal-celebrations">
           <BappaBlessing />
 
-          <p className="royal-eyebrow">
-            #dilHARIYA
-          </p>
+          <div className="royal-event-detail reception-invitation">
 
-          <h1 className="royal-heading">
-            The Wedding Celebrations
-          </h1>
+            <p className="royal-eyebrow reception-invite-text">
+              YOU ARE CORDIALLY INVITED FOR THE
+            </p>
 
-          <p className="royal-event-instruction">
-            Tap any celebration to open its invitation
-          </p>
+            <h1 className="royal-heading reception-title">
+              Wedding Reception
+            </h1>
 
-          <div className="royal-events-grid">
-            {events.map((event) => (
-              <button
-                key={event.id}
-                className={`royal-event-tile tile-${event.id}`}
-                onClick={() => openEvent(event)}
-              >
-                <span className="royal-tile-icon">
-                  {event.icon}
-                </span>
+            <h2 className="reception-of">
+              of
+            </h2>
 
-                <span className="royal-tile-title">
-                  {event.title}
-                </span>
+            <h2 className="reception-couple-names">
+              Riya &amp; Hardik
+            </h2>
 
-              
+            <div className="royal-detail-divider">
+              ✦ ❀ ✦
+            </div>
 
-                <span className="royal-tile-action">
-                  View Invitation →
-                </span>
-              </button>
-            ))}
+            <p className="royal-event-tagline">
+              An evening of elegance and celebration.
+            </p>
+
+            <p className="royal-event-message">
+              Celebrate the newlyweds with an evening of joy,
+              togetherness and unforgettable memories.
+            </p>
+
+            <div className="royal-detail-divider">
+              ✦
+            </div>
+
+            <div className="royal-event-information reception-information">
+              <p><strong>🌸 30 November 2026</strong></p>
+              <p><strong>🕰️ 8:00 PM onwards</strong></p>
+              <p>
+                <strong>
+                  📍 Virasat The Hotel by Triveni Grand
+                </strong>
+              </p>
+            </div>
+
+            <a
+              className="royal-map-button"
+              href="https://maps.app.goo.gl/1GBvyL4mpqSXFykc6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📍 View Location
+            </a>
           </div>
 
           <button
@@ -284,23 +240,19 @@ export default function WeddingJourney() {
               ✦ ❀ ✦
             </div>
 
-           
-<div className="final-rsvp">
-  <span className="final-rsvp-title">
-    INVITATION BY
-  </span>
+            <div className="final-rsvp">
+              <span className="final-rsvp-title">
+                INVITATION BY
+              </span>
 
-  <strong>
-    Sanjay Yadav &amp; Meena Yadav
-  </strong>
+              <strong>
+                Sanjay Yadav &amp; Meena Yadav
+              </strong>
 
-  <a href="tel:9450408936">
-    9450408936
-  </a>
-</div>
-
-
-
+              <a href="tel:9450408936">
+                9450408936
+              </a>
+            </div>
 
             <p className="final-ending-symbol">
               ❀
@@ -314,90 +266,6 @@ export default function WeddingJourney() {
             Revisit the Celebrations ↺
           </button>
         </section>
-      )}
-
-      {/* INDIVIDUAL EVENT INVITATIONS */}
-      {selectedEvent && (
-        <div
-          className={`royal-event-overlay theme-${selectedEvent.id}`}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${selectedEvent.title} invitation`}
-        >
-          <div className="royal-event-detail">
-            <button
-              className="royal-event-close"
-              onClick={closeEvent}
-              aria-label="Close event invitation"
-            >
-              ✕
-            </button>
-
-            <BappaBlessing />
-
-            <p className="royal-eyebrow">
-              YOU ARE CORDIALLY INVITED
-            </p>
-
-            <div className="royal-event-symbol">
-              {selectedEvent.icon}
-            </div>
-
-            <h2 className="royal-event-heading">
-              {selectedEvent.title}
-            </h2>
-
-            {selectedEvent.id !== "haldi" && (
-              <>
-                <p className="royal-event-tagline">
-                  {selectedEvent.tagline}
-                </p>
-
-                <p className="royal-event-message">
-                  {selectedEvent.invitation}
-                </p>
-              </>
-            )}
-
-            <div className="royal-detail-divider">
-              ✦
-            </div>
-
-           
-<div className="royal-event-information">
-  <p>🌸 {selectedEvent.date}</p>
-  <p>🕰️ {selectedEvent.time}</p>
-  <p>📍 {selectedEvent.venue}</p>
-</div>
-
-
-            <a
-              className="royal-map-button"
-              href={selectedEvent.map}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              📍 View Location
-            </a>
-
-            <button
-              type="button"
-              className="all-wedding-events-btn"
-              onClick={closeEvent}
-            >
-              <span
-                className="all-events-arrow"
-                aria-hidden="true"
-              >
-                ←
-              </span>
-
-              <span>
-                All Wedding Events
-              </span>
-            </button>
-          </div>
-        </div>
       )}
     </main>
   );
