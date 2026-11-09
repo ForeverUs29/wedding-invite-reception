@@ -153,11 +153,11 @@ export default function WeddingJourney() {
             </p>
 
             <h1 className="royal-heading reception-title">
-              Wedding Reception
+              Wedding Celebration
             </h1>
 
             <h2 className="reception-of">
-              of
+              OF
             </h2>
 
             <h2 className="reception-couple-names">
@@ -173,7 +173,6 @@ export default function WeddingJourney() {
               Celebrate the newlyweds with an evening of joy,
               togetherness and unforgettable memories.
             </p>
-
             <div className="royal-detail-divider">
               ✦
             </div>

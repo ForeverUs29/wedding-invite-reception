@@ -6184,3 +6184,119 @@
     font-size: 16px !important;
   }
 }
+
+/* Match date and time size with Virasat */
+.reception-information p:nth-child(1) strong,
+.reception-information p:nth-child(2) strong {
+  font-size: 28px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+
+/* Keep all three details consistent on mobile */
+@media (max-width: 600px) {
+  .reception-information p:nth-child(1) strong,
+  .reception-information p:nth-child(2) strong {
+    font-size: 28px !important;
+  }
+}
+
+/* Move decorative star upwards and reduce gap before date */
+.reception-information {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.reception-information p:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Reduce space around the decorative star above date */
+.reception-information {
+  line-height: 1.2 !important;
+}
+
+.reception-date-star {
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+/* Compact spacing below Riya & Hardik */
+.reception-invitation .royal-detail-divider {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  line-height: 1 !important;
+}
+
+.reception-invitation .royal-event-message {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  line-height: 1.4 !important;
+}
+
+.reception-invitation .reception-information {
+  margin-top: 5px !important;
+  margin-bottom: 8px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  gap: 5px !important;
+}
+
+.reception-invitation .reception-information p {
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
+  line-height: 1.25 !important;
+}
+
+.reception-invitation .reception-date-star {
+  margin-top: 0 !important;
+  margin-bottom: 3px !important;
+}
+
+.reception-invitation .royal-map-button {
+  margin-top: 5px !important;
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .reception-invitation .royal-detail-divider {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .reception-invitation .royal-event-message {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .reception-invitation .reception-information {
+    margin-top: 3px !important;
+    margin-bottom: 5px !important;
+  }
+}
+
+/* Force venue subtitle to appear bigger and bolder */
+.royal-celebrations .reception-information .reception-venue .venue-subtitle {
+  display: block !important;
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  color: #542018 !important;
+  -webkit-text-fill-color: #542018 !important;
+  opacity: 1 !important;
+  transform: none !important;
+  line-height: 1.3 !important;
+}
+
+@media (max-width: 600px) {
+  .royal-celebrations .reception-information .reception-venue .venue-subtitle {
+    font-size: 20px !important;
+  }
+}
+/* Move Bappa image down on reception page only */
+.royal-celebrations .royal-bappa-blessing {
+  margin-top: 25px !important;
+  margin-bottom: 10px !important;
+}
