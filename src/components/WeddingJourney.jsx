@@ -31,7 +31,9 @@ export default function WeddingJourney() {
   return (
     <main
       ref={journeyRef}
-      className={`royal-journey royal-${screen}`}
+      className={`royal-journey royal-${screen} ${
+        screen === "celebrations" ? "reception-scroll-enabled" : ""
+      }`}
     >
       <div className="royal-border" aria-hidden="true" />
 
@@ -136,9 +138,17 @@ export default function WeddingJourney() {
         <section className="royal-screen royal-celebrations">
           <BappaBlessing />
 
-          <div className="royal-event-detail reception-invitation">
+          {/* Removed royal-event-detail class to remove the square card/box */}
+          <div className="reception-invitation">
 
-            <p className="royal-eyebrow reception-invite-text">
+            <p
+              className="royal-eyebrow reception-invite-text"
+              style={{
+                color: "#542018",
+                fontWeight: "800",
+                letterSpacing: "2px"
+              }}
+            >
               YOU ARE CORDIALLY INVITED FOR THE
             </p>
 
@@ -186,6 +196,13 @@ export default function WeddingJourney() {
               href="https://maps.app.goo.gl/1GBvyL4mpqSXFykc6"
               target="_blank"
               rel="noopener noreferrer"
+              style={{
+                background: "#E8BD58",
+                color: "#3D2114",
+                border: "1px solid #C99A32",
+                fontWeight: "700",
+                boxShadow: "0 4px 12px rgba(120, 78, 20, 0.18)"
+              }}
             >
               📍 View Location
             </a>
